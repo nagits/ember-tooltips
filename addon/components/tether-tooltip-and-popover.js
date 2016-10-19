@@ -3,7 +3,7 @@ import EmberTetherComponent from 'ember-tether/components/ember-tether';
 
 const { $, computed, observer, run, on } = Ember;
 
-const defaultPosition = 'center';
+const positionTranslation = { 'top': 'bottom', 'right': 'left', 'bottom': 'top', 'left': 'right', 'center': 'center' };
 
 let tooltipOrPopoverCounterId = 0;
 
@@ -47,6 +47,8 @@ export default EmberTetherComponent.extend({
   hideOn: null,
   role: 'tooltip',
   side: 'top',
+  defaultPosition: 'center',
+
   showOn: null,
   spacing: 10,
   tabindex: '0', // A positive integer (to enable) or -1 (to disable)
@@ -126,28 +128,28 @@ export default EmberTetherComponent.extend({
 
   attachment: computed(function() {
     const side = this.get('side');
+    const defaultPosition = this.get('defaultPosition');
 
     let horizontalPosition, verticalPosition;
 
     switch(side) {
       case 'top':
-        horizontalPosition = defaultPosition;
+        horizontalPosition = positionTranslation[defaultPosition];
         verticalPosition = 'bottom';
         break;
       case 'right':
         horizontalPosition = 'left';
-        verticalPosition = defaultPosition;
+        verticalPosition = positionTranslation[defaultPosition];
         break;
       case 'bottom':
-        horizontalPosition = defaultPosition;
+        horizontalPosition = positionTranslation[defaultPosition];
         verticalPosition = 'top';
         break;
       case 'left':
         horizontalPosition = 'right';
-        verticalPosition = defaultPosition;
+        verticalPosition = positionTranslation[defaultPosition];
         break;
     }
-
     return `${verticalPosition} ${horizontalPosition}`;
   }),
 
