@@ -19,29 +19,30 @@ function getParent(view) {
 }
 
 const PASSABLE_PROPERTIES = [
-	'delay',
-	'delayOnChange',
-	'duration',
-	'effect',
-	'event',
-	'hideOn',
-	'keepInWindow',
-	'side',
-	'showOn',
-	'spacing',
-	'isShown',
-	'tooltipIsVisible',
-	'hideDelay',
-	'target',
-	'text',
+  'delay',
+  'delayOnChange',
+  'duration',
+  'effect',
+  'event',
+  'hideOn',
+  'keepInWindow',
+  'side',
+  'relativeSidePosition',
+  'showOn',
+  'spacing',
+  'isShown',
+  'tooltipIsVisible',
+  'hideDelay',
+  'target',
+  'text',
 
-	// non-publicized attributes
-	'updateFor',
-	'targetAttachment',
-	'attachment',
-	'role',
-	'tabindex',
-	'_shouldTargetGrandparentView',
+  // non-publicized attributes
+  'updateFor',
+  'targetAttachment',
+  'attachment',
+  'role',
+  'tabindex',
+  '_shouldTargetGrandparentView',
 ];
 
 const PASSABLE_ACTIONS = [
