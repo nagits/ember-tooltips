@@ -23,7 +23,7 @@
   event='none'
   target='#ember-logo'
   isShown=showLogoTooltip
-  side='right'
+  side='top'
   spacing=15
   enableLazyRendering=true
 }}
@@ -81,8 +81,9 @@
 <div class="some-component">
   Click for more info
 
-  {{#tooltip-on-element event='click' enableLazyRendering=true}}
+  {{#tooltip-on-element event='click' enableLazyRendering=true side='right' relativeSidePosition='bottom'}}
     Here is the info!
+    Quarterdeck man-of-war matey careen squiffy rutters Cat o'nine tails gun topmast hang the jib. Arr rutters topmast booty grog blossom hogshead warp Privateer mutiny keel. Reef heave down spanker red ensign nipperkin quarterdeck lad maroon scourge of the seven seas scuttle.
   {{/tooltip-on-element}}
 </div>
 {{!-- END-SNIPPET --}}
