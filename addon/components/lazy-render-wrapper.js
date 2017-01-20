@@ -43,7 +43,6 @@ const PASSABLE_PROPERTIES = [
   'relativeSidePosition',
   'showOn',
   'spacing',
-  'isShown',
   'tooltipIsVisible',
   'hideDelay',
   'target',
